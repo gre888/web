@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <ul>
+	    <li><a href="pre.html">連結到pre.html網頁(沒有target)</a></li>
+      <li><a href="pre.html" target="_self">連結到pre.html網頁(target="_self")</a></li>
+      <li><a href="pre.html" target="_blank">連結到pre.html網頁(target="_blank")</a></li>
+      <li><a href="pre.html" target="test1">連結到pre.html網頁(target="test1")</a></li>
+      <li><a href="pre.html" target="test2" onclick="window.open(this.href,'test2','width=600,height=400')">連結到pre.html網頁(target="test2" 另開視窗)</a></li>
+      <li><a href="pre.html" target="test" onclick="window.open(this.href,'test','0')">連結到pre.html網頁(target="test" 另開視窗)</a></li>
+      <li><a href="poem.rar" >下載poem.rar檔案</a></li>
+      <li><a href="https://www.google.com.tw/">連線到Google</a></li>   
+      <li><a href="mailto:jean@mail.lucky.com">寫信給客服</a></li>
+      <li><a href="ftp://ftp.e-happy.com.tw" target="new">連線到FTP伺服器</a></li>
+      <li><a href="https://www.google.com.tw/" target="_blank">連線到Google(target="_blank")</a></li>
+      <li><a href="https://www.google.com.tw/" target="test">連線到Google(target="test"會fail開頁籤)</a></li>           
+      <li><a href="https://www.momoshop.com.tw/" target="success">連線到Momo購物網(target="success")</a></li>
+	</ul>
+  </body>
+</html>
