@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      table {
+        border:5px solid yellowgreen;
+        color:blue;
+        background-color:lightyellow;
+        width: 70%;
+        margin: 10px auto;  /*上下間距10像素，左右auto為置中對齊*/
+      }
+      tr {
+        /* border:5px solid green; */ /*此設定無效*/
+        /*以下設定有效*/
+        /* color:rgb(29, 205, 184);
+        background-color:rgb(230, 37, 163); */
+      }
+      tr:hover {
+        color:rgb(97, 102, 233);
+        background-color:rgb(246, 246, 240);
+      }
+      th, td {
+        border: 3px solid green;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>星期一</th>
+        <th>星期二</th>
+        <th>星期三</th>
+      </tr>
+      <tr>
+        <td rowspan="2">瑜珈</td>
+        <td>烹飪</td>
+        <td>插花</td>
+      </tr>
+      <tr>
+        <td>茶道</td>
+        <td>茶道</td>
+      </tr>
+    </table>
+    <br>
+    <table>
+      <tr>
+        <th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th>
+      </tr>
+      <tr>
+        <td>A1</td><td>B1</td><td>C1</td><td>D1</td><td rowspan="2">E1</td><td>F1</td>
+      </tr>
+      <tr>
+        <td>A2</td><td>B2</td><td>C2</td><td>D2</td><td>F2</td>
+      </tr>
+      <tr>
+        <td colspan="2">A3</td><td>C3</td><td>D3</td><td>E3</td><td>F3</td>
+      </tr>
+      <tr>
+        <td>A4</td><td>B4</td><td>C4</td><td colspan="3" rowspan="3">D4</td>
+      </tr>
+      <tr>
+        <td>A5</td><td>B5</td><td>C5</td>
+      </tr>
+      <tr>
+        <td>A6</td><td>B6</td><td>C6</td>
+      </tr>
+    </table>
+  </body>
+</html>

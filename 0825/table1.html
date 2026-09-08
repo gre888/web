@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <title>表格範例</title>
+    <style>
+      table {
+        border:5px solid yellowgreen;
+        color:blue;
+        background-color:lightyellow;
+        width: 70%;
+        margin: 10px auto;  /*上下間距10像素，左右auto為置中對齊*/
+      }
+      tr {
+        /* border:5px solid green; */ /*此設定無效*/
+        /*以下設定有效*/
+        /* color:rgb(29, 205, 184);
+        background-color:rgb(230, 37, 163); */
+      }
+      tr:hover {
+        color:rgb(97, 102, 233);
+        background-color:rgb(246, 246, 240);
+      }
+      th, td {
+        border: 3px solid green;
+      }
+    </style>
+  </head>
+  <body>
+	  <table>
+      <tr>
+        <th>角色</th>
+        <th>人物描述</th>
+      </tr>
+      <tr>
+        <td>芙莉蓮</td>
+        <td>精靈魔法使，與夥伴擊敗魔王後，獨自踏上探索情感的旅程。</td>
+      </tr>
+      <tr>
+        <td>欣梅爾</td>
+        <td>溫柔的勇者，他是芙莉蓮漫長旅途中重要且思念的夥伴。</td>
+      </tr>
+    </table>
+  </body>
+</html>

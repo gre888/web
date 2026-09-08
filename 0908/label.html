@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      body, input, label {font-size: 1.2rem;}
+    </style>
+  </head>
+  <body>
+    <form action="labeldata.php" method="get">
+      性別：
+      <input type="radio" name="gender" id="male" value="1">
+      <label for="male">男</label>
+      <input type="radio" name="gender" id="female" value="0">
+      <label for="female">女</label>
+
+      <p>您使用過哪些廠牌的手機？（可以複選）</p>
+      <input type="checkbox" name="phone[]" id="HTC" value="1" checked>
+      <label for="HTC"> HTC</label>
+      <input type="checkbox" name="phone[]" id="APPLE" value="2">
+      <label for="APPLE"> APPLE</label>
+      <input type="checkbox" name="phone[]" id="ASUS" value="3">
+      <label for="ASUS"> ASUS</label>
+      <input type="checkbox" name="phone[]" id="SONY" value="4">
+      <label for="SONY"> SONY</label>
+      <p>
+      <input type="submit" value="送出">
+      </p>
+    </form>
+  </body>
+</html>
