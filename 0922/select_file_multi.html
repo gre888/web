@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form action="upload_multi.php" method="post" enctype="multipart/form-data">
+            <label for="myfile">檔案(總大小400M，單一檔案最大40M)：</label><input type="file" id="myfile" name="myfile[]" multiple>
+            <p><input type="submit" value="上傳"> <input type="reset" value="清除"></p>
+        </form>
+    </div>
+</body>
+</html>

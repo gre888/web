@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>輸入帳號密碼資料</title>
+    <style>
+      body,input {
+        font-size: 1.7rem;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="login_check.php" method="post">
+      <p>帳號：<input type="text" name="username" size="10" value="test" required></p>
+      <p>密碼：<input type="password" name="password" size="10"></p>
+      <input type="submit" value="登入">
+      <input type="reset" value="重設">
+    </form>
+  </body>
+</html>

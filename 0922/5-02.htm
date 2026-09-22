@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>範例</title>
+	<style>
+		table {
+			/* 設定表格儲存格之間的間距 */
+			border-spacing: 1.2rem;
+		}
+		td{
+			background-color: #e7cbcb;
+			padding: 20px;
+			text-align: center;
+		}
+		h2[class="brand"]{
+			color: #FF3300;
+		}
+		img[alt~="Logo"]{
+			background-color: #b1c6f2;
+			width: 80px; 
+			/* height: 80px; */
+		}	
+		img[alt|="photo"] {
+			background-color: #c4f6cd;
+			width: 80px; 
+			/* height: 80px; */
+		}
+		a[href^="https://"]{
+			color: #FF0000;
+			text-decoration: none;
+		}
+		/* img[alt] {
+			background-color: #f2e7b1;
+		} */
+		
+		img[src$="png"]{
+			border: 2px solid green;
+		}		
+		a[href*="e-happy"]{
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>
+				<h2 class="brand">HTML5</h2>
+				<img src="images/HTML5.png" alt="HTML5 Logo">
+				<p><a href="https://zh.wikipedia.org/zh-tw/HTML5">認識HTML5</a></p>
+			</td>
+			<td>
+				<h2 class="brand">CSS3</h2>
+				<img src="images/CSS3.png" alt="CSS3 Logo">
+				<p><a href="https://zh.wikipedia.org/zh-tw/CSS3">認識CSS3</a></p>
+			</td>
+			<td>
+				<h2>聯絡我們</h2>
+				<img src="images/logo.jpg" alt="eHappy Logo">
+				<p><a href="mailto:e-happy@e-happy.com.tw">文淵閣工作室信箱</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h2 class="brand">HTML5</h2>
+				<img src="images/HTML5.png" alt="photo-1">
+				<p><a href="https://zh.wikipedia.org/zh-tw/HTML5">認識HTML5</a></p>
+			</td>
+			<td>
+				<h2 class="brand">CSS3</h2>
+				<img src="images/CSS3.png" alt="photo-2">
+				<p><a href="https://zh.wikipedia.org/zh-tw/CSS3">認識CSS3</a></p>
+			</td>
+			<td>
+				<h2>聯絡我們</h2>
+				<img src="images/logo.jpg" alt="photo-3">
+				<p><a href="mailto:e-happy@e-happy.com.tw">文淵閣工作室信箱</a></p>
+			</td>
+		</tr>		
+	</table>
+</body>
+</html>
