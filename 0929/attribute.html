@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+
+
+      ul > li {background-color: yellow;}
+      /* 子選擇棄 選擇直接子元素*/
+      ul li {background-color: yellow;}
+      /* 子孫選擇器 選擇所有子孫元素*/
+      /* 相鄰兄弟選擇器 選擇緊接在 img 之後的 p 元素 */
+      img+p{color: red;}
+      /*全體兄弟選擇器 選擇在 img 之後的所有 p 元素 */
+      img~p {color: green}
+
+      /* 屬性選擇器 不比對其值 選擇所有具有 class 屬性的元素 */
+      [class] {color: blue;}
+      /* 屬性選擇器 完全比對其值 選擇 class 屬性值為 apple 的元素 */
+      [class="apple"] {color: purple;}
+      /* 屬性選擇器 包含詞比對 選擇 class 屬性值中包含 apple 的元素 */
+      [class~="apple"] {color: orange;}
+      /* 屬性選擇器 包含詞比對 選擇 class 屬性值中包含 apple 的元素 */
+      [class|="apple"] {color: cyan;}   
+      屬性選擇器 開頭比對 選擇 class 屬性值以 apple 開頭的元素
+      [class^="kiwi"] {color: pink;} 
+      屬性選擇器 結尾比對 選擇 class 屬性值以 apple 結尾的元素
+      [class$="banana"] {color: purple;}
+      /* 屬性選擇器 任意比對 選擇 class 屬性值中包含 apple 的元素 */
+      [class*="fruit"] {font-style: italic;font-weight: bold;}
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li class="apple">
+        蘋果牛奶
+        <ol style="list-style-position: inside;">
+          成分
+          <li>蘋果</li>
+          <li>牛奶</li>
+        </ol>
+      </li>
+      <li class="apple-banana">香蕉蘋果牛奶</li>
+      <li class="apple-strawberry">草莓蘋果牛奶</li>      
+      <li class="apple-kiwifruit">奇異果蘋果牛奶</li>        
+      <li class="grape apple banana">特調牛奶</li>
+      <li class="kiwifruit apple">特調果汁</li>
+    </ul>
+    <img src="images/logo.jpg" alt="文淵閣" title="文淵閣">
+
+
+    <p>這是第一段文字</p>
+    <p>這是第二段文字</p>
+    <p>這是第三段文字</p>
+    <p>這是第四段文字</p>    
+
+    <div>
+      <p>這是 div 內的第五段落文字</p>
+    </div>
+
+
+
+
+  </body>
+</html>

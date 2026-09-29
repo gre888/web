@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demo of :checked</title>
+    </head>
+    <style> 
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input:checked {
+            outline: 1px solid red;
+        }
+
+        input:indeterminate {
+            box-shadow: 0 0 5px 3px red;
+        }
+    </style>
+<body>
+
+    <h1>Demo of :checked</h1>
+
+    <form action="test.php" method="get">
+        <p>Select gender:</p>
+        <label><input name="gender" type="radio" value="male" checked> Male</label>
+        <label><input name="gender" type="radio" value="female"> Female</label>
+        <label><input name="gender" type="radio" value="other"> Other</label>
+
+        <p>Select transport:</p>
+        <label><input name="vehicle[]" type="checkbox" value="bike" checked>I have a bike</label>
+        <label><input name="vehicle[]" type="checkbox" value="motorbike" checked>I have a motorbike</label>
+        <label><input name="vehicle[]" type="checkbox" value="car">I have a car</label> 
+        <br>
+        <input type="checkbox" name="myCheckbox" id="myCheckbox"> Checkbox        
+        <br>
+        <input type="radio" name="radio1" name="rB" value="val1"/>
+        <label for="radio1" style="display: inline;">first radio button</label><br>
+        <input type="radio" name="radio1" id="radio2" value="val2"/>
+        <label for="radio2" style="display: inline;">second radio button</label><br>
+        <p><input type="submit" value="Submit"></p>
+    </form>
+    <script>
+      document.getElementById('myCheckbox').onclick = function() {
+        this.indeterminate = false;
+      };
+      const myCheckbox = document.getElementById('myCheckbox');
+      myCheckbox.indeterminate = true;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>我的網頁</title>
+    <style>
+      p {background-color: lightgoldenrodyellow;}
+      /* 虛擬元素選擇元素第一行 */
+      /* 虛擬元素選擇元素第一個字母 */
+      p::first-line {color: red;} 								/*虛擬元素*/
+      P::first-letter {font-size: 1.5rem; color: green;} 	
+      /*虛擬元素:選擇元素的最後一行加入特定內容 配合content屬性產生內容*/
+      p::after {content: "(王維《相思》)"; color: blue;}		/*虛擬元素*/
+      div::before {content: "《相思》"; color: brown;font-size: 1.5rem;}		/*虛擬元素*/
+      p::selection {background-color: lightblue;} /*虛擬元素:選擇元素被選取的部分*/
+    </style>
+  </head>
+  <body>
+    <div>
+    <p>
+      紅豆生南國，<br>
+      春來發幾枝。<br>
+      願君多採擷，<br>
+      此物最相思。
+    </p>
+    </div>
+  </body>
+</html>

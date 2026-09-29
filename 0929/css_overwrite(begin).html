@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        test1
+        <div>
+            test2
+            <h1>標題一:h1</h1>
+            <h2>標題二:h2</h2>
+            <p>段落一</p>
+            <!--元素 < 行內樣式 -->
+            <p>段落二(行內樣式)</p>
+            <p class="class1">段落三(class1)</p>
+            <p class="class1">段落四(class1)</p>
+            <p id="id1">段落五(id1)</p>
+            <!-- id < 行內：1.後面的設定會覆蓋前面的設定(隱含行內樣式，因為行內樣式最後發生) -->
+            <p id="id2" style="border: 5px red solid;">段落六(id2 & 行內樣式)</p>
+            <p id="id3" class="class2">段落七(id3 & class2)</p>
+            <p id="id4" class="class2">段落八(id4 & class2)</p>
+            <h1>標題三:h1</h1>
+            <h2>標題四:h2</h2>
+        </div>
+    </body>
+</html>

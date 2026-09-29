@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+
+        <!-- <link rel="stylesheet" href="mystyle.css"> -->
+
+        <style>
+          /* CSS 覆蓋規則:
+          1. 後面設定會覆蓋前面設定(適用於link引入的外部CSS 但不適用於@import引入的CSS)
+          2. 範圍越明確越優先套用
+             全域選擇器(*)<元素選擇器<分類class選擇器<ID選擇器<行內樣式
+          3. !important 可以用來強制覆蓋其他樣式
+          4. 內層元素會覆蓋外層元素的設定
+          5. 前端程式碼送出的CSS會覆蓋後端或外部送出的CSS。
+         */
+            *{
+              margin: 0;
+            }
+            /* 全域選擇器 <元素選擇器 (此規則不受後面覆蓋前面的影響)*/
+            h1 {
+              margin: 10px;
+            }
+            h2 {
+              margin: 20px;
+            }
+            p {
+              margin: 15px;
+            }
+
+
+
+
+            /* 內層元素會覆蓋外層元素的設定  */
+            div{
+              background-color: lightslategray;
+            }
+            
+
+            /* h 元素選擇器<分類class選擇器 */
+            .class1 {
+              background-color: blue;
+            }
+
+    
+            /* 元素選擇器<ID選擇器 */
+            #id1 {
+              background-color: green;
+            }
+            /* ID選擇器<行內樣式 */
+            #id2 {
+              border: 2px solid yellow;
+            }
+
+
+            /* 分類選擇器<ID選擇器 */
+            #id3 {
+              text-decoration: line-through;
+            }
+            #id4 {
+              text-decoration: overline;
+            }
+            .class2 {
+              text-decoration: underline; /* 假設開發者想要設定文字下劃線 */
+            }
+
+
+
+            @import url("mystyle.css");
+            body{
+              background-color: cadetblue;
+              color: white;
+            }
+        </style>
+        <script src="myjs.js"></script>
+
+
+    </head>
+
+
+    <body>
+        test1
+        <div>
+            test2
+            <h1>標題一:h1</h1>
+            <h2>標題二:h2</h2>
+            <p>段落一</p>
+            <!--元素 < 行內樣式 -->
+            <p>段落二(行內樣式)</p>
+            <p class="class1">段落三(class1)</p>
+            <p class="class1">段落四(class1)</p>
+            <p id="id1">段落五(id1)</p>
+            <!-- id < 行內：1.後面的設定會覆蓋前面的設定(隱含行內樣式，因為行內樣式最後發生) -->
+            <p id="id2">段落六(id2 & 行內樣式)</p>
+            <p id="id3" class="class2">段落七(id3 & class2)</p>
+            <p id="id4" class="class2">段落八(id4 & class2)</p>
+            <h1>標題三:h1</h1>
+            <h2>標題四:h2</h2>
+        </div>
+        <!-- 外部javascript的執行可能會覆蓋內部javascript的設定 -->
+        <script src="myjs.js"></script>
+        <script>
+          const p5 = document.getElementById("id1");
+          p5.style.backgroundColor = "pink";
+        </script>
+    </body>
+</html>
