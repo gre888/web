@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>中文直書範例</title>
+    <style>
+        .vertical-text {
+            /* 設定為垂直書寫，由右至左 */
+            writing-mode: vertical-rl;
+            
+            /* 讓英文字母和數字也保持正立（可選） */
+            text-orientation: upright;
+            
+            /* 設定高度與字型，方便呈現排版效果 */
+            height: 400px;
+            font-family: "Microsoft JhengHei", "Heiti TC", sans-serif;
+            font-size: 1.2rem;
+            line-height: 2.5;
+            letter-spacing: 0.8rem;       /* 中文段落的單詞間距 */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="vertical-text">
+        <p>這是一段測試中文直書排版的文字。</p>
+        <p>在網頁設計中，使用 CSS 的 writing－mode 屬性就能輕鬆達成這個效果。</p>
+    </div>
+
+</body>
+</html>

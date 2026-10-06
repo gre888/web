@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+  text-align: right;（绝对物理位置）
+  行为：无论网页的阅读方向是从左到右（LTR，如中文、英文）还是从右到左（RTL，如阿拉伯语、希伯来语），它永远将文本对齐到容器的物理右侧。
+  适用场景：当你明确希望某个元素无论什么语言都强制靠右时使用。
+
+  text-align: end;（逻辑相对位置）
+  行为：这是一个逻辑属性值。它会根据当前元素的书写方向（direction 属性）自动判断“结尾”在哪：
+  在从左到右（LTR）的语言中，end 相当于 right（右）。
+
+  在从右到左（RTL）的语言中，end 会自动反转，相当于 left（左）。
+  -->
+  <!-- LTR 环境（常规中文/英文） -->
+  <div style="direction: ltr; text-align: end;">
+    这段文字会靠右对齐（因为LTR的结尾是右边）。
+  </div>
+
+  <!-- RTL 环境（如阿拉伯语环境） -->
+  <div style="direction: rtl; text-align: end;">
+    这段文字会靠左对齐（因为RTL的结尾是左边）。
+  </div>
+</body>
+</html>
