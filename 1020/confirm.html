@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+  </head>
+  <body>    
+
+    <form id="myform" action="confirm_data.php" method="get">
+      <label for="username">姓名：</label>     
+	  <input type="text" id="username" name="username">
+	  <input type="submit">
+    </form>    
+	<!-- <script src="confirm.js"></script>   -->
+    <script>
+      let myform = document.getElementById('myform');
+      myform.addEventListener('submit', function(e) {
+        if (!window.confirm('確定要提交表單？'))
+        // 如果使用者按下取消，阻止表單提交
+          e.preventDefault();
+      }, false);
+    </script>
+  </body>
+</html>

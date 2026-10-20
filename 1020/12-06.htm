@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>範例</title>
+  <script>
+    //定義一個person類別的的函式,用來產生person物件用的
+  function Person(name, age, weight, height) {
+    this.name = name;
+    this.age = age;
+    this.weight = weight;
+    this.height = height;
+    //定義一個sayHello方法，用來回傳個人資訊的字串
+    this.sayHello = function () {
+      return "您好，我是" +this.name + "，今年" + this.age + "歲，身高" + this.height + "公分，體重" + this.weight + "公斤。";
+    }
+  }
+  </script>
+</head>
+
+<body>
+<script>
+  //使用new方式建立兩個person物件 let2個變數
+let person1 = new Person("David", 25, 75, 180);	
+//修改person1的體重為80
+person1.weight=80;
+//刪除person1的體重屬性
+//delete person1.weight
+let person2 = new Person("Ken", 20, 65, 175);	
+document.write(person1.sayHello() + "<br>"+ person2.sayHello());
+</script>
+</body>
+</html>

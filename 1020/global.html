@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>全域變數範例</title>
+
+    
+  </head>
+  <body>
+    <script>
+      // 宣告全域變數(痊癒變數不能被有效範圍{}包住)
+            function showMsg() {
+                var msg = 'Hello1';
+                window.alert("function: " + msg);
+              }
+      let msg = 'Hello';
+      showMsg();
+      window.alert(msg);
+    </script>
+  </body> 
+</html>

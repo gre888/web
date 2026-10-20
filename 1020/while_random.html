@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>猜數字遊戲</title>
+  </head>
+  <body>
+    <script>
+      let target = Math.floor(Math.random() * 10) + 1; // 生成1到10之間的隨機數字
+      while (true) 
+      {
+        let number = Number(prompt('輸入1 ~ 10的數字', ''));
+        if (Number.isNaN(number))
+        {
+          alert('輸入的不是數字！');
+          continue; // 如果輸入的不是數字，繼續下一輪
+        } 
+        else if (number > 10 || number < 1)
+        {
+          alert('輸入的數字不在範圍內！');
+          continue; // 如果輸入的數字不在範圍內，繼續下一輪
+        }
+        else if (number > target) 
+        {
+          alert('太大了！請重新輸入！');
+          continue; // 如果輸入的數字太大，繼續下一輪
+        }
+        else if (number < target) 
+        {
+          alert('太小了！請重新輸入！');
+          continue; // 如果輸入的數字太小，繼續下一輪
+        }
+        else if (number == target)
+        {
+          alert('答對了！');
+          break; // 如果輸入的數字正確，跳出迴圈
+        }
+      }
+      document.write('這次的猜謎數字:'+target);
+     </script>
+  </body>
+</html>

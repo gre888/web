@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">    
+    <script>
+      //注意韓世忠不論使用var還是let，函式內的變數都不會影響函式外的同名變數
+        function showMsg() {
+          var msg = 'Good';
+          window.alert(msg);
+        }
+    </script>
+  </head>
+  <body>
+    <script>
+      var msg = 'Hello';
+      showMsg();
+      window.alert(msg);
+    </script>
+  </body>
+</html>
